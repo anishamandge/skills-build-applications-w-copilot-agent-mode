@@ -1,18 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Activities from './components/Activities';
-import Leaderboard from './components/Leaderboard';
-import Teams from './components/Teams';
-import Users from './components/Users';
-import Workouts from './components/Workouts';
-import './App.css';
+
+import octofitLogo from '../public/octofitapp-small.png';
+
 
 function App() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">OctoFit Tracker</Link>
+          <div className="octofit-logo">
+            <img src={octofitLogo} alt="OctoFit Logo" className="d-inline-block align-top" style={{height: '40px', marginRight: '10px'}} />
+            <Link className="navbar-brand" to="/">OctoFit Tracker</Link>
+          </div>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item"><Link className="nav-link" to="/activities">Activities</Link></li>
